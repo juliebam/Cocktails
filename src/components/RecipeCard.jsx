@@ -3,8 +3,13 @@ import { useEffect, useState } from 'react'
 function RecipeCard(props) {
     const {drinkDetails} = props;
     console.log(drinkDetails)
-    const {strDrink, idDrink} = drinkDetails;
+    
+console.log('recipeCard')
     console.log(drinkDetails)
+    // const [drinks] = drinkDetails;
+    // console.log(drinks)
+        // const {strDrink, idDrink} = drinkDetails;
+    // console.log(drinkDetails)
 
  
     const [drinkIdData, setDrinkIdData] = useState([]);
@@ -31,7 +36,8 @@ function RecipeCard(props) {
     return(
         <div>
             {/* icon of type of glass */}
-            <p>{strDrink}</p>
+            {/* <p>{strDrink}</p> */}
+            <p>Hello</p>
             {/* Type of drink */}
             {/* if drinkIdData is not empty show drinkIdData[0].strCategory */}
             {/* <p>{drinkIdData[0] !==null ? drinkIdData[0].strCategory : ""}</p> */}

@@ -18,7 +18,7 @@ function App() {
           </Route>
           <Route path="/ingredients">
                 <Ingredients />
-            </Route>
+          </Route>
         </Switch>
       </div>
     </Router>

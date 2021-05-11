@@ -1,6 +1,5 @@
 // import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css"
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 
 import { useHistory } from 'react-router-dom'
 
@@ -9,7 +8,6 @@ import { useHistory } from 'react-router-dom'
 
 
 function Home() {
-    
 
         const history = useHistory()
         const handleClick = (alcoholName) => {
@@ -18,7 +16,7 @@ function Home() {
         console.log(alcoholName)
     }
     return(
-        <Router>
+        <div>
             <div className={styles.homeIngredients}>
                     <div onClick={()=>{handleClick('Whiskey')
                         } } className={styles.inner}>
@@ -54,7 +52,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </Router>
+        </div>
     )
 }
 
