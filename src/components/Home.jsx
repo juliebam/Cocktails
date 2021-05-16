@@ -1,10 +1,7 @@
-// import { useEffect, useState } from "react";
+
 import styles from "../styles/Home.module.css"
 
 import { useHistory } from 'react-router-dom'
-
-
-
 
 
 function Home() {
@@ -12,7 +9,6 @@ function Home() {
         const history = useHistory()
         const handleClick = (alcoholName) => {
         history.push(`/ingredients?alcohol=${alcoholName}`)
-
         console.log(alcoholName)
     }
     return(

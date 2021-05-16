@@ -1,48 +1,24 @@
-import { useEffect, useState } from 'react'
+import styles from "../styles/RecipeCard.module.css"
+
+import { useHistory } from 'react-router-dom'
+
 
 function RecipeCard(props) {
     const {drinkDetails} = props;
-    console.log(drinkDetails)
-    
-console.log('recipeCard')
-    console.log(drinkDetails)
-    // const [drinks] = drinkDetails;
-    // console.log(drinks)
-        // const {strDrink, idDrink} = drinkDetails;
-    // console.log(drinkDetails)
+    const {strDrink, strCategory, strGlass,idDrink} = drinkDetails;
 
- 
-    const [drinkIdData, setDrinkIdData] = useState([]);
-
-    useEffect(() => {
-    //     async function getDrinkDataById(url=`https://thecocktaildb.com/api/json/v2/9973533/lookup.php?i=${idDrink}`)
-    // {
-    //     try {
-    //         const response = await fetch(url)
-    //         const drinkDataById = await response.json();
-    //         console.log(drinkDataById)
-    //         const drinkByIdArray = drinkDataById.drinks;
-    //         setDrinkIdData(drinkByIdArray)
-    //     } catch(error) {
-    //         console.log('Error happened here!')
-    //         console.log(error)
-    //     }
-    // }
-
-    // getDrinkDataById()
-    },[])
-    console.log(props)
+    const history = useHistory()
+    const handleClick = (idDrink) => {
+    history.push(`/detailedRecipeCard?id=${idDrink}`)
+    console.log(idDrink)
+    }
 
     return(
-        <div>
-            {/* icon of type of glass */}
-            {/* <p>{strDrink}</p> */}
-            <p>Hello</p>
-            {/* Type of drink */}
-            {/* if drinkIdData is not empty show drinkIdData[0].strCategory */}
-            {/* <p>{drinkIdData[0] !==null ? drinkIdData[0].strCategory : ""}</p> */}
-            {/* Type of glass */}
-            {/* <p>{!drinkIdData ? drinkIdData[0].strGlass : null}</p> */}
+        <div className={styles.recipeCard} onClick={()=>handleClick(idDrink)}>
+            <img src="" alt=""/>
+            <p>{strDrink}</p>
+            <p>{strCategory}</p>
+            <p>{strGlass}</p>
         </div>
     )
 }

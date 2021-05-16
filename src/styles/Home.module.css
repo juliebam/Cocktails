@@ -1,17 +1,7 @@
-.liquerChoices {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5%;
-}
-
-.liquerChoices div {
-  cursor: pointer;
-}
 .inner {
   border: 3px solid tomato;
-  padding: 10%;
-  width: 90%;
+  /* padding: 10%; */
+  /* width: 90%; */
 }
 
 .homeIngredients {

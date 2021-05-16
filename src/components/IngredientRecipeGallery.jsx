@@ -1,5 +1,6 @@
 import RecipeCard from './RecipeCard.jsx'
 
+import styles from "../styles/IngredientRecipeGallery.module.css"
 
 
 function IngredientResultGallery(props) {
@@ -7,8 +8,8 @@ function IngredientResultGallery(props) {
     console.log(props)
 
     return(
-        <div>
-            {props.cocktailData.map(drink => <RecipeCard drinkDetails={drink} key={drink.idDrink}/>)}
+        <div className={styles.drinkGallery}>
+            {props.drinkData.map(drink => <RecipeCard drinkDetails={drink}/>)}
         </div>
     )
 }
