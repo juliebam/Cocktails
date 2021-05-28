@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ed99ac54.chunk.css",
+    "main.js": "/static/js/main.846823e4.chunk.js",
+    "main.js.map": "/static/js/main.846823e4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e19cfff5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e19cfff5.js.map",
+    "static/js/2.a4e2696b.chunk.js": "/static/js/2.a4e2696b.chunk.js",
+    "static/js/2.a4e2696b.chunk.js.map": "/static/js/2.a4e2696b.chunk.js.map",
+    "static/js/3.1973e91b.chunk.js": "/static/js/3.1973e91b.chunk.js",
+    "static/js/3.1973e91b.chunk.js.map": "/static/js/3.1973e91b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.ed99ac54.chunk.css.map": "/static/css/main.ed99ac54.chunk.css.map",
+    "static/js/2.a4e2696b.chunk.js.LICENSE.txt": "/static/js/2.a4e2696b.chunk.js.LICENSE.txt",
+    "static/media/gin.1839c1c2.jpg": "/static/media/gin.1839c1c2.jpg",
+    "static/media/rum.8e1b9e77.jpg": "/static/media/rum.8e1b9e77.jpg",
+    "static/media/tequila.01e17e6c.jpg": "/static/media/tequila.01e17e6c.jpg",
+    "static/media/vodka.3a2e2df6.jpg": "/static/media/vodka.3a2e2df6.jpg",
+    "static/media/whiskey.d2799abb.jpg": "/static/media/whiskey.d2799abb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e19cfff5.js",
+    "static/js/2.a4e2696b.chunk.js",
+    "static/css/main.ed99ac54.chunk.css",
+    "static/js/main.846823e4.chunk.js"
+  ]
+}
