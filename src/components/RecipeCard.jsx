@@ -2,10 +2,28 @@ import styles from "../styles/RecipeCard.module.css"
 
 import { useHistory } from 'react-router-dom'
 
+import { useEffect } from 'react'
+
+import { useDispatch, useSelector } from "react-redux";
+
+import { thunkActionForID } from '../connect/action.js'
+
+
 
 function RecipeCard(props) {
     const {drinkDetails} = props;
-    const {strDrink, strCategory, strGlass,idDrink} = drinkDetails;
+    const {strDrink, idDrink} = drinkDetails;
+
+    const drinkData = useSelector(state => state.drinkDataByID[idDrink])
+    const dispatch = useDispatch()
+
+    
+    useEffect(() => {
+        dispatch(thunkActionForID(idDrink))
+    }, [dispatch])
+
+
+    console.log(drinkData);
 
     const history = useHistory()
     const handleClick = (idDrink) => {
@@ -15,10 +33,10 @@ function RecipeCard(props) {
 
     return(
         <div className={styles.recipeCard} onClick={()=>handleClick(idDrink)}>
-            <img src="" alt=""/>
             <p>{strDrink}</p>
-            <p>{strCategory}</p>
-            <p>{strGlass}</p>
+        {/* ternary if drinkData exist return  if not  */}
+            <p>{drinkData?.strCategory}</p>
+            <p>{drinkData?.strGlass}</p>
         </div>
     )
 }

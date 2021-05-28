@@ -1,11 +1,49 @@
 .inner {
-  border: 3px solid tomato;
-  /* padding: 10%; */
-  /* width: 90%; */
+  /* border: 3px solid tomato; */
+  padding: 1%;
+  flex: 1 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40%;
+  height: 80vh;
+  position: relative;
+  cursor: pointer;
 }
 
 .homeIngredients {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Pattaya&display=swap");
+
+.inner h2,
+p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+  width: 50%;
+  z-index: 1;
+  text-align: center;
+}
+
+inner h2 {
+  font-size: 3.5rem;
+}
+
+.inner::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.3s;
+  width: 100%;
+  z-index: 1;
+}
+
+inner:hover:before {
+  background-color: rgba(0, 0, 0, 0);
 }

@@ -3,9 +3,26 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+import {Provider} from 'react-redux'
+
+import { applyMiddleware, createStore } from 'redux'
+
+import  { composeWithDevTools } from 'redux-devtools-extension';
+
+import thunkMiddleware  from 'redux-thunk'
+
+import drinkDataReducer from './connect/reducer.js'
+
+const middleware = composeWithDevTools(applyMiddleware(thunkMiddleware)) 
+const store = createStore(drinkDataReducer, middleware)
+
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

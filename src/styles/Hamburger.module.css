@@ -1,0 +1,21 @@
+.toggle span,
+.toggle span:before,
+toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background-color: black;
+  position: absolute;
+  display: block;
+  content: "";
+  /* padding: 10px; */
+}
+
+.toggle span:before {
+  top: -20px;
+}
+
+.toggle span:after {
+  bottom: -20px;
+}

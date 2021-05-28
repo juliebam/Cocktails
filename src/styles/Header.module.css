@@ -1,0 +1,16 @@
+.header {
+  height: 10vh;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: "Pattaya", sans-serif;
+  font-size: 4rem;
+  color: #0b373c;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
