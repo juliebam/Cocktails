@@ -18,7 +18,7 @@ function Home() {
         const history = useHistory()
         const handleClick = (alcoholName) => {
         history.push(`/ingredients?alcohol=${alcoholName}`)
-        console.log(alcoholName)
+        // console.log(alcoholName)
     }
 
     const ingredientImages = {
@@ -36,8 +36,8 @@ function Home() {
         
         <div>
             <div className={styles.homeIngredients}>
-                {alcoholList.map(item =>      
-                    <div onClick={()=>{handleClick(item)
+                {alcoholList.map((item, index) =>      
+                    <div  key={index} onClick={()=>{handleClick(item)
                         } } className={styles.inner} style={{
                             backgroundImage: `url(${ingredientImages[item]})`
                         }}>

@@ -19,7 +19,7 @@ function DetailedRecipeCard() {
     
     const query = useQuery();
     const id = query.get('id')
-    console.log(id);
+    // console.log(id);
     
     const drinkObject = useSelector(state => state.drinkDataByID[id])
 
@@ -29,7 +29,7 @@ function DetailedRecipeCard() {
         dispatch(thunkActionForID(id))
     }, [dispatch])
 
-    console.log(drinkObject)
+    // console.log(drinkObject)
 
 
     function getIngredientsAndMeasurements () {
@@ -38,10 +38,10 @@ function DetailedRecipeCard() {
         } 
         //convert drink object to an array anf filter out strIngredient
         const ingredientArray = Object.entries(drinkObject).filter(([key, value])=> key.includes("strIngredient"))
-        console.log(ingredientArray)
+        // console.log(ingredientArray)
         //filter out further for everything that does not include null or empty ""
         const filteredIngredientsArray = ingredientArray.filter(([key, value]) => value !== null && value !== "" )
-        console.log(filteredIngredientsArray)
+        // console.log(filteredIngredientsArray)
 
         //map through the filtered array and for each item remove the strIngredients
         filteredIngredientsArray.map(item => {
@@ -50,14 +50,14 @@ function DetailedRecipeCard() {
         })
 
         const finalIngredientArray = filteredIngredientsArray.flat(1)
-        console.log(finalIngredientArray)
+        // console.log(finalIngredientArray)
 
 
         //get measurements
         const measurementsArray = Object.entries(drinkObject).filter(([key, value])=> key.includes("strMeasure"))
 
         const filteredMeasurementArray = measurementsArray.filter(([key, value]) => value !== null && value !== "" )
-        console.log(filteredMeasurementArray)
+        // console.log(filteredMeasurementArray)
 
 
         filteredMeasurementArray.map(item => {

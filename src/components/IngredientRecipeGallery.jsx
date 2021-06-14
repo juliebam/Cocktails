@@ -6,11 +6,11 @@ import { useSelector } from 'react-redux';
 
 function IngredientResultGallery(props) {
     const drinkData = useSelector(state => state.drinkData)
-    console.log(props)
+    // console.log(props)
 
     return(
         <div className={styles.drinkGallery}>
-            {drinkData.map(drink => <RecipeCard drinkDetails={drink}/>)}
+            {drinkData.map((drink, index) => <RecipeCard drinkDetails={drink} key={index}/>)}
         </div>
     )
 }

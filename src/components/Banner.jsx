@@ -9,7 +9,7 @@ import Rum from '../images/rum.jpg'
 function Banner(props) {
 
     
-    console.log(props)
+    // console.log(props)
     const {ingredientName} = props
     
     const ingredientImages = {

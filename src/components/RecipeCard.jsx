@@ -20,15 +20,15 @@ function RecipeCard(props) {
     
     useEffect(() => {
         dispatch(thunkActionForID(idDrink))
-    }, [dispatch])
+    }, [dispatch, idDrink])
 
 
-    console.log(drinkData);
+    // console.log(drinkData);
 
     const history = useHistory()
     const handleClick = (idDrink) => {
     history.push(`/detailedRecipeCard?id=${idDrink}`)
-    console.log(idDrink)
+    // console.log(idDrink)
     }
 
     return(

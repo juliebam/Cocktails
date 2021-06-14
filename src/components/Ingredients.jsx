@@ -26,10 +26,11 @@ function useQuery() {
     useEffect(() => {
         initData(ingredientName)
         // props.test('whiskey')
+        console.log('api call here')
 }
 ,[location]);
 
-console.log(drinkData)
+// console.log(drinkData)
 
 
     return (

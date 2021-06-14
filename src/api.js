@@ -6,11 +6,11 @@ export async function getDrinkData(ingredientName)
         const url = `https://thecocktaildb.com/api/json/v2/9973533/filter.php?i=${ingredientName}`
         const response = await fetch(url)
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         const drinkDataArray = data.drinks;
         return drinkDataArray;
     } catch(error) {
-        console.log('Error in the first api call!')
+        // console.log('Error in the first api call!')
         console.error(error.message)
         throw error;
     }
@@ -28,7 +28,7 @@ export async function getDetailsById(drinkId) {
             return null
         }
     } catch (error) {
-        console.log('Error in the 2nd api call!')
+        // console.log('Error in the 2nd api call!')
         console.error(error.message)
         throw error;
     }

@@ -48,7 +48,7 @@ function App() {
         console.error(error.message)
     }
 }
-console.log(drinkData)
+// console.log(drinkData)
   return (
 
       <Router>
